@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Instrument Sans, Arial, sans-serif" font-size="16" role="img" aria-label="Espira de radio R vista de canto con campo B sobre el eje a distancia x">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#111"/></marker></defs>
+<rect width="640" height="340" fill="#fff"/>
+<g fill="none" stroke="#111" stroke-width="2">
+<line x1="40" y1="160" x2="610" y2="160" marker-end="url(#a)"/>
+<ellipse cx="150" cy="160" rx="24" ry="90"/>
+<line x1="150" y1="155" x2="150" y2="80" stroke-dasharray="4 4" stroke-width="1.5"/>
+</g>
+<g fill="none" stroke="#e8590c" stroke-width="2.5">
+<line x1="150" y1="70" x2="430" y2="160" stroke-dasharray="6 4" stroke-width="2"/>
+<line x1="150" y1="250" x2="430" y2="160" stroke-dasharray="6 4" stroke-width="2"/>
+<line x1="430" y1="160" x2="461" y2="65" marker-end="url(#a)"/>
+<line x1="430" y1="160" x2="461" y2="255" marker-end="url(#a)"/>
+<line x1="430" y1="160" x2="540" y2="160" stroke-width="4" marker-end="url(#a)"/>
+<path d="M395,160 A35,35 0 0 0 398,146" stroke="#111" stroke-width="1.5"/>
+</g>
+<g stroke="#111" stroke-width="2" fill="#fff">
+<circle cx="150" cy="70" r="9"/><circle cx="150" cy="250" r="9"/>
+<line x1="144" y1="244" x2="156" y2="256"/><line x1="156" y1="244" x2="144" y2="256"/>
+</g>
+<circle cx="150" cy="70" r="2.8" fill="#111"/>
+<circle cx="430" cy="160" r="4" fill="#111"/>
+<g fill="#111">
+<text x="436" y="182">P</text>
+<text x="105" y="62">I (sale)</text><text x="105" y="278">I (entra)</text>
+<text x="158" y="125">R</text>
+<text x="285" y="184">x</text>
+<text x="280" y="102" fill="#e8590c">r</text>
+<text x="372" y="143">α</text>
+<text x="468" y="62" fill="#e8590c">dB</text>
+<text x="468" y="266" fill="#e8590c">dB'</text>
+<text x="500" y="152" fill="#e8590c" font-weight="700">B</text>
+<text x="600" y="182" font-size="14">x</text>
+</g>
+<line x1="150" y1="190" x2="430" y2="190" stroke="#111" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="320" y="300" text-anchor="middle" font-size="15" fill="#111">dB y dB': las componentes ⟂ al eje se cancelan; las axiales (dB·senα) se suman</text>
+<text x="320" y="324" text-anchor="middle" font-size="15" fill="#111">senα = R/√(R²+x²)  →  B = μ₀IR² / [2(R²+x²)<tspan baseline-shift="super" font-size="11">3/2</tspan>]</text>
+</svg>

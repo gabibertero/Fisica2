@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Instrument Sans, Arial, sans-serif" font-size="16" role="img" aria-label="Líneas de B cerradas de un imán con superficie gaussiana e imán partido">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#111"/></marker></defs>
+<rect width="640" height="380" fill="#fff"/>
+<circle cx="210" cy="178" r="105" fill="#fdf3ec" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<rect x="150" y="160" width="60" height="36" fill="#ddd" stroke="#111" stroke-width="2"/>
+<rect x="210" y="160" width="60" height="36" fill="#fbd9c6" stroke="#111" stroke-width="2"/>
+<g fill="#111" font-weight="700"><text x="172" y="184">S</text><text x="232" y="184">N</text></g>
+<g fill="none" stroke="#111" stroke-width="1.8">
+<path d="M270 178A60 45 0 0 0 150 178"/><path d="M270 178A60 85 0 0 0 150 178"/><path d="M270 178A60 135 0 0 0 150 178"/><path d="M270 178A60 165 0 0 0 150 178"/>
+<path d="M150 178A60 45 0 0 0 270 178"/><path d="M150 178A60 85 0 0 0 270 178"/><path d="M150 178A60 135 0 0 0 270 178"/><path d="M150 178A60 165 0 0 0 270 178"/>
+<line x1="160" y1="178" x2="262" y2="178" marker-end="url(#a)"/>
+</g>
+<g fill="#111">
+<path d="M205 133l10-5v10z"/><path d="M205 93l10-5v10z"/><path d="M205 43l10-5v10z"/><path d="M205 13l10-5v10z"/>
+<path d="M215 223l-10-5v10z"/><path d="M215 263l-10-5v10z"/><path d="M215 313l-10-5v10z"/><path d="M215 343l-10-5v10z"/>
+</g>
+<g fill="#e8590c" font-size="14"><text x="318" y="108">sale</text><text x="68" y="108">entra</text><text x="318" y="270">sale</text><text x="68" y="270">entra</text></g>
+<text x="210" y="10" font-size="0"> </text>
+<text x="300" y="372" text-anchor="middle" font-size="15" fill="#111">Superficie cerrada (naranja): entran tantas líneas como salen → ∮ B·dS = 0</text>
+<g transform="translate(440,0)" fill="#111">
+<text x="95" y="120" text-anchor="middle" font-size="15">Imán partido</text>
+<rect x="15" y="160" width="40" height="30" fill="#ddd" stroke="#111" stroke-width="2"/><rect x="55" y="160" width="40" height="30" fill="#fbd9c6" stroke="#111" stroke-width="2"/>
+<rect x="105" y="160" width="40" height="30" fill="#ddd" stroke="#111" stroke-width="2"/><rect x="145" y="160" width="40" height="30" fill="#fbd9c6" stroke="#111" stroke-width="2"/>
+<g font-weight="700" font-size="14"><text x="30" y="180">S</text><text x="70" y="180">N</text><text x="120" y="180">S</text><text x="160" y="180">N</text></g>
+<text x="100" y="225" text-anchor="middle" font-size="14">cada mitad: N y S nuevos</text>
+<text x="100" y="245" text-anchor="middle" font-size="14">(no hay monopolos)</text>
+</g>
+</svg>

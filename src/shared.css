@@ -1,0 +1,59 @@
+/* Paleta AGA: papel #f5f2ec, tinta #1d1b18. Un color por unidad. */
+:root {
+  --bg: #f5f2ec; --ink: #1d1b18; --muted: #6b665d; --line: #d9d3c7; --card: #fffdf8;
+  --u1: #b4532a; --u2: #a1741a; --u3: #6b7d1f; --u4: #2f7d5b; --u5: #1f7a8c;
+  --u6: #2e5fa3; --u7: #5a4fa8; --u8: #96408f; --u9: #b03a4f;
+  --sans: 'Instrument Sans', system-ui, sans-serif; --serif: 'STIX Two Text', Georgia, serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--sans); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; }
+main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+a { color: inherit; }
+.muted { color: var(--muted); }
+.bloque { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+button, .btn { font: inherit; background: var(--ink); color: var(--bg); border: 0; border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+.btn.sec { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.katex-display { overflow-x: auto; overflow-y: hidden; }
+/* Unidades: <span class="u u6">U6</span> o cualquier elemento con .u6 { --c } */
+.u1{--c:var(--u1)}.u2{--c:var(--u2)}.u3{--c:var(--u3)}.u4{--c:var(--u4)}.u5{--c:var(--u5)}
+.u6{--c:var(--u6)}.u7{--c:var(--u7)}.u8{--c:var(--u8)}.u9{--c:var(--u9)}
+.u { color: var(--c); border: 1px solid var(--c); border-radius: 4px; padding: 0 6px; font-weight: 600; font-size: .85em; }
+
+/* Header de navegación */
+.nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 16px; padding: 10px 16px; background: var(--ink); color: var(--bg); }
+.nav .brand { font: 700 1.15rem var(--serif); text-decoration: none; white-space: nowrap; }
+.nav nav { display: flex; gap: 4px; overflow-x: auto; }
+.nav nav a { padding: 6px 12px; border-radius: 6px; text-decoration: none; white-space: nowrap; opacity: .85; }
+.nav nav a:hover { opacity: 1; }
+.nav nav a.on { background: var(--bg); color: var(--ink); opacity: 1; font-weight: 600; }
+
+h1, h2, h3, h4 { scroll-margin-top: 64px; }
+:focus-visible { outline: 3px solid var(--u6); outline-offset: 2px; }
+.nav :focus-visible { outline-color: var(--bg); }
+.skip { position: absolute; left: -9999px; background: var(--bg); color: var(--ink); padding: 8px 12px; z-index: 20; }
+.skip:focus { left: 8px; top: 8px; }
+
+/* Celular */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .nav { flex-wrap: wrap; gap: 4px 8px; padding: 8px 12px; }
+  .nav .brand { font-size: 1rem; }
+  .nav nav { flex-wrap: wrap; overflow: visible; }
+  .nav nav a { padding: 6px 9px; }
+  h1, h2, h3, h4 { scroll-margin-top: 96px; }
+  main { padding: 16px 12px 48px; }
+}
+
+/* PDF / impresión: A4, gris, sin botones */
+@page { size: A4; margin: 18mm 16mm; @bottom-center { content: counter(page); font: 9pt 'Instrument Sans', sans-serif; } }
+@page :left { margin: 18mm 22mm 18mm 14mm; }
+@page :right { margin: 18mm 14mm 18mm 22mm; }
+@media print {
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  .nav, button, .btn, .no-print { display: none !important; }
+  main { max-width: none; padding: 0; }
+  .bloque, h2, h3, figure, table, pre { break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+  .bloque { border-color: #999; background: #fff; }
+}

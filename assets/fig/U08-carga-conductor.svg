@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Instrument Sans, Arial, sans-serif" font-size="16" role="img" aria-label="Tramo de conductor de largo L con portadores de velocidad v en campo B entrante: fuerza F hacia arriba">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#111"/></marker>
+<marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#e8590c"/></marker></defs>
+<rect width="640" height="340" fill="#fff"/>
+<rect x="110" y="120" width="400" height="90" fill="#f3f3f3" stroke="#111" stroke-width="2.5"/>
+<g fill="#fff" stroke="#111" stroke-width="1.5"><circle cx="150" cy="150" r="9"/><circle cx="260" cy="185" r="9"/><circle cx="370" cy="145" r="9"/><circle cx="470" cy="180" r="9"/></g>
+<g stroke="#111" stroke-width="2"><path d="M146 150h8M150 146v8M256 185h8M260 181v8M366 145h8M370 141v8M466 180h8M470 176v8"/></g>
+<g stroke="#111" stroke-width="2" fill="none"><path d="M150 165v0M155 150h28" marker-end="url(#a)"/><path d="M265 185h28" marker-end="url(#a)"/><path d="M375 145h28" marker-end="url(#a)"/><path d="M475 180h28" marker-end="url(#a)"/></g>
+<g stroke="#e8590c" stroke-width="3" fill="none"><line x1="150" y1="138" x2="150" y2="88" marker-end="url(#o)"/><line x1="370" y1="133" x2="370" y2="83" marker-end="url(#o)"/></g>
+<g fill="none" stroke="#999" stroke-width="1.5"><g id="x"><circle cx="210" cy="250" r="9"/><path d="M204 244l12 12M216 244l-12 12"/></g><use href="#x" x="120"/><use href="#x" x="240"/></g>
+<line x1="110" y1="285" x2="510" y2="285" stroke="#111" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<line x1="60" y1="260" x2="60" y2="120" stroke="#111" stroke-width="0"/>
+<line x1="555" y1="120" x2="555" y2="210" stroke="#111" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<g fill="#111">
+<text x="300" y="306" text-anchor="middle">L</text>
+<text x="568" y="170">A</text>
+<text x="190" y="143">v</text>
+<text x="158" y="104" fill="#e8590c">F</text><text x="378" y="99" fill="#e8590c">F</text>
+<text x="470" y="256" font-size="15" fill="#666">B entrante</text>
+<text x="20" y="50" font-size="17">Portadores + con v hacia la derecha (sentido de I): F = q v × B apunta hacia arriba</text>
+<text x="20" y="75" font-size="17">N = n·A·L portadores → F = N q v B = (n q v A) L B = I L B  (F = I L × B)</text>
+<text x="320" y="330" text-anchor="middle" font-size="14" fill="#666">B es normal al plano del dibujo, entrando</text>
+</g>
+</svg>

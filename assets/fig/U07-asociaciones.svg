@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">Resistencias en serie y en paralelo</title>
+  <desc id="desc">Dos circuitos comparan dos resistencias en serie, atravesadas por la misma corriente, y en paralelo, con la misma diferencia de potencial.</desc>
+  <rect width="720" height="300" rx="16" fill="#f5f2ec"/>
+  <text x="36" y="40" font-family="sans-serif" font-size="21" font-weight="700" fill="#1d1b18">Asociaciones de resistencias</text>
+  <text x="55" y="78" font-family="sans-serif" font-size="18" font-weight="700" fill="#286b62">Serie · I común</text>
+  <path d="M60 105v105h75m95 0h60V105H60" fill="none" stroke="#1d1b18" stroke-width="3"/>
+  <rect x="135" y="193" width="40" height="34" rx="3" fill="#d9e8e3" stroke="#1d1b18" stroke-width="2"/>
+  <rect x="180" y="193" width="40" height="34" rx="3" fill="#d9e8e3" stroke="#1d1b18" stroke-width="2"/>
+  <text x="145" y="216" font-family="sans-serif" font-size="15" fill="#1d1b18">R₁</text>
+  <text x="190" y="216" font-family="sans-serif" font-size="15" fill="#1d1b18">R₂</text>
+  <text x="70" y="97" font-family="sans-serif" font-size="15" fill="#1d1b18">ε</text>
+  <text x="139" y="252" font-family="sans-serif" font-size="16" fill="#1d1b18">Rₑq = R₁ + R₂</text>
+  <text x="390" y="78" font-family="sans-serif" font-size="18" font-weight="700" fill="#286b62">Paralelo · ΔV común</text>
+  <path d="M390 105v105h35m190 0h45V105H390M425 105v105m190-105v105" fill="none" stroke="#1d1b18" stroke-width="3"/>
+  <rect x="410" y="137" width="40" height="34" rx="3" fill="#d9e8e3" stroke="#1d1b18" stroke-width="2"/>
+  <rect x="600" y="137" width="40" height="34" rx="3" fill="#d9e8e3" stroke="#1d1b18" stroke-width="2"/>
+  <text x="420" y="160" font-family="sans-serif" font-size="15" fill="#1d1b18">R₁</text>
+  <text x="610" y="160" font-family="sans-serif" font-size="15" fill="#1d1b18">R₂</text>
+  <text x="400" y="97" font-family="sans-serif" font-size="15" fill="#1d1b18">ε</text>
+  <text x="454" y="252" font-family="sans-serif" font-size="16" fill="#1d1b18">1/Rₑq = 1/R₁ + 1/R₂</text>
+</svg>

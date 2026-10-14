@@ -3,7 +3,7 @@
 import { createRequire } from 'node:module';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, statSync } from 'node:fs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PW_PATH = process.env.PW_PATH || '/private/tmp/claude-501/-Users-gabrielagustinberterojarchum-Desktop-UTN-2--A-o-Fisica-2-github/557106c8-c788-46b7-bf29-41d7350563bb/scratchpad/pw';
@@ -69,6 +69,41 @@ async function probar(browser, name, vpName) {
 
   const captura = join(CAPTURAS, `${name}-${vpName}.png`);
   await page.screenshot({ path: captura, fullPage: true });
+  if (name === 'index') {
+    const units = page.getByRole('tab');
+    if (await units.count() !== 4) fallas.push('machete: se esperaban cuatro pestañas U6–U9');
+    if (await page.locator('body').innerText().then((text) => text.includes('[FIGURA:'))) {
+      fallas.push('machete: quedaron marcadores [FIGURA] sin convertir');
+    }
+    for (const unit of ['U6', 'U7', 'U8', 'U9']) {
+      const tab = page.getByRole('tab', { name: unit });
+      await tab.click();
+      const panel = page.locator(`#panel-${unit.replace('U', 'U0')}`);
+      if (!await panel.isVisible()) fallas.push(`machete: panel ${unit} no visible`);
+      try {
+        for (const image of await panel.locator('img').all()) {
+          await image.scrollIntoViewIfNeeded();
+          await image.evaluate((element) => element.decode());
+        }
+      } catch (error) {
+        fallas.push(`machete ${unit}: no se pudo cargar una figura (${error.message})`);
+      }
+      const imagesOk = await panel.locator('img').evaluateAll((images) => images.length > 0 && images.every((image) => image.naturalWidth > 0));
+      if (!imagesOk) fallas.push(`machete ${unit}: figuras ausentes o rotas`);
+    }
+    if (vpName === 'desktop') {
+      await page.getByRole('tab', { name: 'U6' }).focus();
+      await page.keyboard.press('ArrowRight');
+      if (await page.getByRole('tab', { name: 'U7' }).getAttribute('aria-selected') !== 'true') {
+        fallas.push('machete: ArrowRight no activó U7');
+      }
+      if (!await page.locator('#panel-U07').isVisible()) fallas.push('machete: panel U7 no visible');
+      await page.getByRole('button', { name: 'Imprimir / guardar PDF' }).click();
+      const pdf = join(CAPTURAS, 'index-prueba.pdf');
+      await page.pdf({ path: pdf, format: 'A4', printBackground: true });
+      if (statSync(pdf).size < 1000) fallas.push('PDF de prueba vacío o incompleto');
+    }
+  }
   await context.close();
   return { fallas, captura };
 }

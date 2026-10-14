@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">Inductancia mutua entre dos solenoides</title>
+  <desc id="desc">Dos solenoides coaxiales: la corriente variable I1 en la bobina primaria crea un flujo que atraviesa las espiras N2 de la bobina secundaria e induce una fem.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#286b62"/>
+    </marker>
+  </defs>
+  <rect width="720" height="300" rx="16" fill="#f5f2ec"/>
+  <text x="28" y="38" font-family="sans-serif" font-size="21" font-weight="700" fill="#1d1b18">Inductancia mutua · bobinas coaxiales</text>
+  <path d="M130 108h460M130 192h460" stroke="#1d1b18" stroke-width="3"/>
+  <g fill="none" stroke="#286b62" stroke-width="4">
+    <ellipse cx="190" cy="150" rx="20" ry="42"/><ellipse cx="250" cy="150" rx="20" ry="42"/>
+    <ellipse cx="310" cy="150" rx="20" ry="42"/><ellipse cx="370" cy="150" rx="20" ry="42"/>
+    <ellipse cx="430" cy="150" rx="20" ry="42"/><ellipse cx="490" cy="150" rx="20" ry="42"/>
+  </g>
+  <g fill="none" stroke="#c6532d" stroke-width="3">
+    <ellipse cx="190" cy="150" rx="31" ry="54"/><ellipse cx="250" cy="150" rx="31" ry="54"/>
+    <ellipse cx="310" cy="150" rx="31" ry="54"/><ellipse cx="370" cy="150" rx="31" ry="54"/>
+    <ellipse cx="430" cy="150" rx="31" ry="54"/><ellipse cx="490" cy="150" rx="31" ry="54"/>
+  </g>
+  <path d="M160 150h365" stroke="#286b62" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="321" y="139" font-family="sans-serif" font-size="18" fill="#1d1b18">Φ<tspan baseline-shift="sub" font-size="12">21</tspan></text>
+  <text x="145" y="232" font-family="sans-serif" font-size="16" fill="#286b62">primario · N₁ · I₁(t)</text>
+  <text x="380" y="232" font-family="sans-serif" font-size="16" fill="#c6532d">secundario · N₂</text>
+  <text x="132" y="78" font-family="sans-serif" font-size="17" fill="#1d1b18">ε₂ = −M dI₁/dt</text>
+  <text x="245" y="272" font-family="sans-serif" font-size="17" fill="#1d1b18">Bobinas superpuestas · flujo común</text>
+</svg>

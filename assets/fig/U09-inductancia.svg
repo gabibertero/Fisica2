@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">Autoinducción en un solenoide</title>
+  <desc id="desc">Solenoide de N vueltas y longitud ℓ; su corriente I crea un campo B y flujo ΦB en cada espira, con inductancia L.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#286b62"/>
+    </marker>
+  </defs>
+  <rect width="720" height="300" rx="16" fill="#f5f2ec"/>
+  <text x="28" y="38" font-family="sans-serif" font-size="21" font-weight="700" fill="#1d1b18">Inductancia propia · solenoide largo</text>
+  <path d="M145 100h410M145 200h410" stroke="#1d1b18" stroke-width="3"/>
+  <g fill="none" stroke="#286b62" stroke-width="4">
+    <ellipse cx="170" cy="150" rx="15" ry="50"/><ellipse cx="210" cy="150" rx="15" ry="50"/>
+    <ellipse cx="250" cy="150" rx="15" ry="50"/><ellipse cx="290" cy="150" rx="15" ry="50"/>
+    <ellipse cx="330" cy="150" rx="15" ry="50"/><ellipse cx="370" cy="150" rx="15" ry="50"/>
+    <ellipse cx="410" cy="150" rx="15" ry="50"/><ellipse cx="450" cy="150" rx="15" ry="50"/>
+    <ellipse cx="490" cy="150" rx="15" ry="50"/><ellipse cx="530" cy="150" rx="15" ry="50"/>
+  </g>
+  <path d="M230 150h210" stroke="#286b62" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="321" y="139" font-family="sans-serif" font-size="18" fill="#1d1b18">B, Φ<tspan baseline-shift="sub" font-size="12">B</tspan></text>
+  <path d="M140 235v18M555 235v18M148 245h399" stroke="#1d1b18" stroke-width="2"/>
+  <path d="m148 245 12-6v12zM547 245l-12-6v12z" fill="#1d1b18"/>
+  <text x="346" y="272" font-family="sans-serif" font-size="18" fill="#1d1b18">ℓ</text>
+  <text x="580" y="126" font-family="sans-serif" font-size="17" fill="#1d1b18">N vueltas</text>
+  <text x="580" y="154" font-family="sans-serif" font-size="17" fill="#1d1b18">I variable</text>
+  <text x="580" y="182" font-family="sans-serif" font-size="17" fill="#1d1b18">L = N dΦ<tspan baseline-shift="sub" font-size="12">B</tspan>/dI</text>
+</svg>

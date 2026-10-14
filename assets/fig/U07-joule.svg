@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">Potencia disipada en una resistencia</title>
+  <desc id="desc">Circuito cerrado con fuente, corriente I y resistencia R que disipa potencia de Joule P igual a I por diferencia de potencial.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#286b62"/>
+    </marker>
+  </defs>
+  <rect width="720" height="260" rx="16" fill="#f5f2ec"/>
+  <text x="30" y="42" font-family="sans-serif" font-size="21" font-weight="700" fill="#1d1b18">Efecto Joule en R</text>
+  <path d="M170 90V190H300M420 190h130V90H170" fill="none" stroke="#1d1b18" stroke-width="4"/>
+  <path d="M300 190l12-18 18 36 18-36 18 36 18-36 18 18" fill="none" stroke="#1d1b18" stroke-width="4"/>
+  <path d="M170 115v45" stroke="#286b62" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="130" y="140" font-family="sans-serif" font-size="18" fill="#1d1b18">I</text>
+  <path d="M550 150V110" stroke="#286b62" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="565" y="135" font-family="sans-serif" font-size="17" fill="#1d1b18">I</text>
+  <path d="M170 88h22M170 77v22M550 88h-22" stroke="#1d1b18" stroke-width="3"/>
+  <text x="147" y="77" font-family="sans-serif" font-size="16" fill="#1d1b18">ε</text>
+  <text x="345" y="230" font-family="sans-serif" font-size="18" fill="#1d1b18">R</text>
+  <text x="278" y="112" font-family="sans-serif" font-size="19" font-weight="700" fill="#286b62">P = I ΔV = I²R</text>
+  <text x="278" y="139" font-family="sans-serif" font-size="16" fill="#1d1b18">energía eléctrica → calor</text>
+</svg>

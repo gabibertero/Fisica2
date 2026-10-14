@@ -13,19 +13,23 @@ Líneas de `src/data/machete/` según el estado al momento de armar el índice. 
 | U06.md:105 C vs R | U06-C-vs-R.png |
 | U06.md:107 E vs x | U06-E-vs-x.png |
 | U06.md:109 V vs x | U06-V-vs-x.png |
-| U07.md:47 red de dos mallas | U07-kirchhoff-dos-mallas.png |
-| U07.md:86 conductor con E, J, ddp | pendiente |
-| U07.md:96 R serie y paralelo | pendiente |
-| U07.md:106 cilindro v_d·Δt | U07-corriente-arrastre.png |
-| U07.md:114 rama con fem y r | U07-rama-fem-signos.png |
-| U07.md:126 circuito RC con llave | U07-RC-circuito-llave.png |
-| U07.md:127 cuatro gráficos RC | U07-RC-cuatro-graficos.png |
-| U07.md:135 carga con tangente, τ y 5τ | U07-RC-tau-5tau.png |
-| U07.md:142 puente de Wheatstone | U07-wheatstone.png |
-| U07.md:149 potenciómetro | U07-potenciometro.png |
-| U07.md:154 curva V–I | U07-curva-VI.png |
-| U07.md:156 R vs T | U07-R-vs-T.png |
-| U07.md:158 Vab vs I | U07-Vab-vs-I.png |
+| U07.md:50 red de dos mallas | U07-kirchhoff-dos-mallas.png |
+| U07.md:91 conductor con L, A, E, J | U07-ohm-geometrica.svg |
+| U07.md:101 circuito resistivo y potencia de Joule | U07-joule.svg |
+| U07.md:111 resistencias serie/paralelo | U07-asociaciones.svg |
+| U07.md:120 red de dos mallas | U07-kirchhoff-dos-mallas.png |
+| U07.md:129 cilindro v_d·Δt | U07-corriente-arrastre.png |
+| U07.md:134 rama con fem y r | U07-rama-fem-signos.png |
+| U07.md:139 resistencia vs T | U07-R-vs-T.png |
+| U07.md:149 circuito RC con llave | U07-RC-circuito-llave.png |
+| U07.md:150 cuatro gráficos RC | U07-RC-cuatro-graficos.png |
+| U07.md:157 carga con marcas τ y 5τ | U07-RC-tau-5tau.png |
+| U07.md:166 puente de Wheatstone | U07-wheatstone.png |
+| U07.md:171 potenciómetro | U07-potenciometro.png |
+| U07.md:175 curva V–I | U07-curva-VI.png |
+| U07.md:176 R vs T | U07-R-vs-T.png |
+| U07.md:177 Vab vs I | U07-Vab-vs-I.png |
+| U07.md:178 cuatro gráficos RC | U07-RC-cuatro-graficos.png |
 | U08.md:89 B hilo recto (Biot–Savart) | U08-biot-savart-hilo.png |
 | U08.md:97 espira sobre el eje | U08-espira-eje.svg |
 | U08.md:104 hilo con amperiana | U08-hilo-campo.png |
@@ -39,16 +43,12 @@ Líneas de `src/data/machete/` según el estado al momento de armar el índice. 
 | U08.md:149 órbita circular | U08-circular.png |
 | U08.md:153 selector y espectrómetro | U08-selector-espectrometro.png |
 | U08.md:157 hélice | U08-helice.png |
-| U09.md:82 barra deslizante | U09-barra-deslizante.png |
-| U09.md:87 barra con R y fuerzas | U09-barra-deslizante.png |
-| U09.md:91 espira girando, Φ(t), ε(t) | U09-fem-senoidal.png |
-| U09.md:95 espira con galvanómetro | pendiente |
-| U09.md:99 solenoide N, l, A | U08-solenoide.png |
-| U09.md:103 solenoide 2 sobre el 1 | pendiente |
-| U09.md:107 circuito RL | U09-circuito-rl.png |
-| U09.md:108 I(t) al cerrar y V_R, V_L | U09-i-cierre.png, U09-tensiones-rl.png |
-| U09.md:112 I(t) al abrir | U09-i-apertura.png |
-| U09.md:116 energía en L | U09-energia-rl.png |
-| U09.md:120 solenoide con volumen sombreado | pendiente |
-| U09.md:124 transformador | pendiente |
-
+| U09.md:54 barra deslizante | U09-barra-deslizante.png |
+| U09.md:62 barra con R y fuerzas | U09-barra-fuerzas.svg |
+| U09.md:70 espira girando, Φ(t), ε(t) | U09-fem-senoidal.png |
+| U09.md:79 solenoide N, l, A, flujo propio | U09-inductancia.svg |
+| U09.md:86 solenoides coaxiales y flujo mutuo | U09-mutua.svg |
+| U09.md:94 circuito RL | U09-circuito-rl.png |
+| U09.md:95 I(t) al cerrar y V_R, V_L | U09-i-cierre.png, U09-tensiones-rl.png |
+| U09.md:96 I(t) al abrir | U09-i-apertura.png |
+| U09.md:112 energía en L | U09-energia-rl.png |

@@ -1,5 +1,5 @@
 // Genera los HTML autocontenidos en la raíz: node build.mjs
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
@@ -33,6 +33,23 @@ const katexCss = readFileSync(nm + 'katex/dist/katex.min.css', 'utf8').replace(
 // Cada página recibe solo los ids que le corresponden (prefijo con "/" final, o id exacto).
 const json = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
 const jsSafe = (s) => s.replace(/<\/script/gi, '<\\/script').replace(/<!--/g, '<\\!--');
+const escapeAttr = (s) => s.replace(/[&"<>]/g, (c) => ({ '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' })[c]);
+const figureImages = (body, source, marker) => {
+  const files = [...body.matchAll(/(?:assets\/fig\/)?([A-Za-z0-9][\w.-]*\.(?:png|svg))/g)];
+  if (!files.length) throw new Error(`${source}: marcador de figura sin archivo: ${marker}`);
+  const caption = body.slice(0, files[0].index).replace(/[·\s`]+$/g, '').trim();
+  return files.map((match, index) => {
+    const file = match[1];
+    if (!existsSync(join('assets/fig', file))) throw new Error(`${source}: no existe assets/fig/${file}`);
+    const alt = files.length > 1 ? `${caption} (${index + 1} de ${files.length})` : caption;
+    return `<img src="assets/fig/${file}" alt="${escapeAttr(alt)}" loading="lazy">`;
+  }).join('');
+};
+const renderFigures = (raw, source) => raw
+  .replace(/^[ \t]*-?[ \t]*\[FIGURA:\s*([^\]]+)\][ \t]*$/gm, (marker, body) =>
+    `\n<figure class="machete-figure"><span class="machete-figures">${figureImages(body, source, marker)}</span></figure>\n`)
+  .replace(/\[FIGURA:\s*([^\]]+)\]/g, (marker, body) =>
+    `<span class="machete-figures">${figureImages(body, source, marker)}</span>`);
 const all = new Map();
 for (const p of walk('src/data')) {
   const base = p.split(sep).pop();
@@ -41,7 +58,10 @@ for (const p of walk('src/data')) {
   const id = relative('src/data', p).split(sep).join('/').replace(/\.(json|md)$/, '');
   if (all.has(id)) throw new Error(`src/data: id duplicado: ${id}`);
   const raw = readFileSync(p, 'utf8');
-  all.set(id, json(p.endsWith('.json') ? JSON.parse(raw) : marked.parse(raw))); // JSON.parse falla el build si el json está roto
+  const content = p.endsWith('.json') ? JSON.parse(raw) : marked.parse(
+    p.startsWith('src/data/machete/') ? renderFigures(raw, p) : raw,
+  );
+  all.set(id, json(content)); // JSON.parse falla el build si el json está roto
 }
 const PAGE_DATA = {
   index: ['machete/'], preguntero: ['preguntas/'], estudio: ['tarjetas/', 'deducciones'],

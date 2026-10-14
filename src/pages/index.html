@@ -9,9 +9,88 @@
 <body>
 {{nav}}
 <main id="main">
-  <h1>Inicio</h1>
-  <p class="muted">Plan y machete U1–U9 (próximamente).</p>
+  <section class="home-today bloque" aria-labelledby="today-title">
+    <p class="home-eyebrow">Física II · UTN</p>
+    <h1 id="today-title">Hoy toca</h1>
+    <p>Repaso para el segundo parcial: elegí una unidad de U6 a U9 y empezá por el machete.</p>
+    <button type="button" class="home-start" data-open-unit="U06">Empezar por U6</button>
+  </section>
+
+  <section class="home-study" aria-labelledby="machete-title">
+    <div class="home-heading">
+      <div>
+        <p class="home-eyebrow">Repaso rápido</p>
+        <h2 id="machete-title">Machete</h2>
+      </div>
+      <button type="button" class="btn sec no-print" id="print-unit">Imprimir / guardar PDF</button>
+    </div>
+    <div class="home-tabs u6" role="tablist" aria-label="Unidades del segundo parcial">
+      <button type="button" role="tab" id="tab-U06" aria-controls="panel-U06" aria-selected="true" tabindex="0" data-unit="U06">U6</button>
+      <button type="button" role="tab" id="tab-U07" aria-controls="panel-U07" aria-selected="false" tabindex="-1" data-unit="U07">U7</button>
+      <button type="button" role="tab" id="tab-U08" aria-controls="panel-U08" aria-selected="false" tabindex="-1" data-unit="U08">U8</button>
+      <button type="button" role="tab" id="tab-U09" aria-controls="panel-U09" aria-selected="false" tabindex="-1" data-unit="U09">U9</button>
+    </div>
+    <div id="machete-panels" class="home-panels"></div>
+  </section>
 </main>
 {{scripts}}
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"][data-unit]')];
+  const panels = document.querySelector('#machete-panels');
+  const printButton = document.querySelector('#print-unit');
+  const htmlFor = (unit) => {
+    const data = document.querySelector(`script[data-id="machete/${unit}"]`);
+    if (!data) throw new Error(`Falta el machete ${unit}`);
+    return JSON.parse(data.textContent);
+  };
+
+  for (const tab of tabs) {
+    const panel = document.createElement('section');
+    panel.id = tab.getAttribute('aria-controls');
+    panel.className = 'home-panel bloque';
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', tab.id);
+    panel.tabIndex = 0;
+    panel.hidden = tab.dataset.unit !== 'U06';
+    panel.innerHTML = htmlFor(tab.dataset.unit);
+    panels.append(panel);
+    FIS2.render(panel);
+  }
+
+  const activate = (unit, focus = false) => {
+    for (const tab of tabs) {
+      const selected = tab.dataset.unit === unit;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      document.querySelector(`#${tab.getAttribute('aria-controls')}`).hidden = !selected;
+      if (selected && focus) tab.focus();
+    }
+    document.querySelector('.home-tabs').className = `home-tabs ${unit.toLowerCase().replace('0', '')}`;
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.unit));
+    tab.addEventListener('keydown', (event) => {
+      const next = {
+        ArrowRight: (index + 1) % tabs.length,
+        ArrowLeft: (index - 1 + tabs.length) % tabs.length,
+        Home: 0,
+        End: tabs.length - 1,
+      }[event.key];
+      if (next === undefined) return;
+      event.preventDefault();
+      activate(tabs[next].dataset.unit, true);
+    });
+  });
+
+  document.querySelector('[data-open-unit]').addEventListener('click', (event) => {
+    const unit = event.currentTarget.dataset.openUnit;
+    activate(unit, true);
+    document.querySelector('#machete-title').scrollIntoView({ block: 'start' });
+  });
+  printButton.addEventListener('click', () => window.print());
+})();
+</script>
 </body>
 </html>

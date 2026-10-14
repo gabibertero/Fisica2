@@ -34,6 +34,25 @@ button, .btn { font: inherit; background: var(--ink); color: var(--bg); border: 
 .u6{--c:var(--u6)}.u7{--c:var(--u7)}.u8{--c:var(--u8)}.u9{--c:var(--u9)}
 .u { color: var(--c); border: 1px solid var(--c); border-radius: 4px; padding: 0 6px; font-weight: 600; font-size: .85em; }
 
+/* Inicio: Hoy toca y machete por unidad */
+.home-today { padding: 22px 24px; border-top: 4px solid var(--u6); }
+.home-today h1, .home-heading h2 { margin: 0; }
+.home-today p:not(.home-eyebrow) { max-width: 58ch; }
+.home-eyebrow { margin: 0 0 6px; color: var(--muted); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.home-start { min-height: 44px; }
+.home-study { margin-top: 28px; }
+.home-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.home-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--line); }
+.home-tabs [role="tab"] { min-width: 54px; min-height: 44px; margin-bottom: -1px; border-radius: 6px 6px 0 0; border-bottom: 3px solid transparent; }
+.home-tabs [role="tab"][aria-selected="true"] { background: var(--card); color: var(--c); border-bottom-color: var(--c); }
+.home-panels { min-width: 0; }
+.home-panel[hidden] { display: none !important; }
+.home-panel { margin-top: 0; border-top: 0; border-radius: 0 0 8px 8px; }
+.home-panel h1 { margin-top: 0; }
+.machete-figure { margin: 10px 0; }
+.machete-figures { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 8px 0; }
+.machete-figures img { display: block; width: auto; max-width: min(100%, 560px); max-height: 320px; object-fit: contain; }
+
 /* Header de navegación */
 .nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 16px; padding: 10px 16px; background: var(--ink); color: var(--bg); }
 .nav .brand { font: 700 1.15rem var(--serif); text-decoration: none; white-space: nowrap; }
@@ -57,6 +76,9 @@ h1, h2, h3, h4 { scroll-margin-top: 64px; }
   .nav nav a { padding: 6px 9px; }
   h1, h2, h3, h4 { scroll-margin-top: 96px; }
   main { padding: 16px 12px 48px; }
+  .home-today { padding: 18px 16px; }
+  .home-heading { align-items: start; flex-direction: column; }
+  .home-tabs { gap: 4px; }
 }
 
 /* PDF / impresión: A4, gris, sin botones */
@@ -67,7 +89,13 @@ h1, h2, h3, h4 { scroll-margin-top: 64px; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
   .nav, button, .btn, .no-print { display: none !important; }
   main { max-width: none; padding: 0; }
-  .bloque, h2, h3, figure, table, pre { break-inside: avoid; }
+  .home-today { display: none; }
+  .home-study { margin: 0; }
+  .home-heading { margin-bottom: 8px; }
+  .home-tabs { display: none; }
+  .home-panel { border: 0; padding: 0; margin: 0; }
+  .machete-figures img { max-height: 230px; filter: grayscale(1); }
+  .bloque, h2, h3, figure, table, pre, li, .machete-figures { break-inside: avoid; }
   h1, h2, h3 { break-after: avoid; }
   .bloque { border-color: #999; background: #fff; }
 }

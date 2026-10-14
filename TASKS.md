@@ -15,11 +15,11 @@ Prioridad: U6–U9 primero, para el P2 del 03/11. Meta: tener algo usable public
 
 ## C. U6–U9 (P2)
 - [x] T07 · redactor · `src/data/machete/U06.md` a partir de `apuntes/U06.md`, con el formato del SPEC (fichas de 2 renglones, ¿Qué me piden?, deducciones ⭐ según T01).
-- [ ] T08 · redactor · Machete U07.
-- [ ] T09 · redactor · Machete U08.
-- [ ] T10 · redactor · Machete U09.
+- [x] T08 · redactor · Machete U07.
+- [x] T09 · redactor · Machete U08.
+- [x] T10 · redactor · Machete U09.
 - [x] T11 · graficos · Dibujos esquemáticos de U6–U9 (dieléctrico en capacitor, mallas de Kirchhoff, B de un conductor recto, espira, solenoide, barra móvil, RL i(t)) → PNG o SVG en `assets/fig/`.
-- [ ] T12 · sonnet · `index.html`: Inicio ("Hoy toca"), pestañas del machete y botón PDF → captura en desktop y celular, PDF de prueba.
+- [x] T12 · sonnet · `index.html`: Inicio ("Hoy toca"), pestañas del machete y botón PDF → captura en desktop y celular, PDF de prueba.
 - [ ] T13 · verificador + profe · Auditar el machete U6–U9 (preguntas 1, 2, 4, 5 y 16) → corregir los NO.
 - [ ] T14 · redactor · Preguntas U06 y U07: 25 por unidad, con los 4 tipos y las 3 dificultades, ≥30 % con redacción Andrade → `src/data/preguntas/U06.json`, `U07.json`.
 - [ ] T15 · redactor · Preguntas U08 y U09: 25 por unidad.
@@ -61,4 +61,8 @@ Prioridad: U6–U9 primero, para el P2 del 03/11. Meta: tener algo usable public
 - 2026-10-13 · T02: 42 ejercicios U1–U4 (auditó verificador; corregidas citas de Práctica.pdf, E07, E33, E36 = −12 µC por geometría, E42). check_brandan: 41 OK, E42 sin datos.
 - 2026-10-13 · T05: `src/shared.js` ya implementaba las funciones; se ampliaron los asserts para KaTeX, apertura/copia de IA (incluido fallback), y restauración del cronómetro. Pasaron `node tests/shared.test.mjs`, `node build.mjs`, `node tests/e2e.mjs` (10/10) y `python3 tests/check_brandan.py` (41 OK, E42 sin datos).
 - 2026-10-13 · T07: creado `src/data/machete/U06.md`, auditado por agente independiente; se completó cita de la dependencia de la capacidad con el material (Andrade p.25). Build y e2e pasan; `tests/check.py` y `tests/lab.test.mjs` todavía no existen. Queda reportada para reconciliar en perfil/rúbrica la discrepancia entre `apuntes/perfil.md` y el índice T01 sobre material Andrade U6; no se modificó `apuntes/`.
+- 2026-10-13 · T08: creado/corregido `src/data/machete/U07.md`; auditoría independiente y reauditoría completadas. Corregidas páginas 2R4/Andrade, descarga RC, fuentes en U7-24/U7-25, respuestas breves y esquemas de Ohm/Joule/asociaciones (`assets/fig/U07-*.svg`). Build, shared tests, e2e (10/10), check_brandan (41 OK, E42 sin datos), XML SVG y referencias a figuras pasan; `tests/check.py` y `tests/lab.test.mjs` no existen. Este avance todavía no se volvió a subir a GitHub.
+- 2026-10-13 · T09: completado `src/data/machete/U08.md`, auditado y re-auditado de forma independiente. Cobertura de conceptos de peso 3, fichas breves, fórmulas y páginas contrastadas; corrección explícita del error Andrade sobre torque a 90°, definición operacional de B y referencia integral de Biot–Savart. Build, shared tests, e2e (10/10), check_brandan (41 OK, E42 sin datos), referencias de 21 figuras y `git diff --check` pasan. `tests/check.py` y `tests/lab.test.mjs` no existen. Pendiente fuera de alcance: `apuntes/perfil.md` afirma que no hay material Andrade U5–U13, contradicho por T01 (U8, Teórico 2 pp.29–35); se preservó el material original. Cambios locales aún no subidos a GitHub.
+- 2026-10-13 · T10: completado `src/data/machete/U09.md` con auditoría independiente y reauditoría aprobada. Corregidas las respuestas de Faraday/Foucault, el balance de fuerza y potencia de la barra, los signos, la definición de inductancia y las citas; incorporados esquemas accesibles para barra, inductancia propia y mutua. Índice de figuras actualizado. Build, shared tests, E2E (10/10), check_brandan (41 OK, E42 sin datos) y `git diff --check` pasan. Avance local aún no subido a GitHub.
+- 2026-10-13 · T12: Inicio con resumen “Hoy toca”, pestañas accesibles U6–U9, render de fórmulas/figuras desde los machetes y botón de imprimir la unidad seleccionada. Build y `shared.test.mjs` pasan; E2E 10/10 comprueba tabs, teclado, carga de figuras, capturas desktop/celular y PDF. PDF de prueba: 16 páginas A4, escala de grises, solo U7 seleccionada, con dibujos. `tests/check.py` y `tests/lab.test.mjs` no existen. Cambios locales aún no subidos a GitHub.
 - Pendiente de Gabi: fecha del recup, duración de los parciales, puntajes del práctico, P1 práctico (si lo tiene).
